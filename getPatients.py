@@ -31,7 +31,6 @@ def lambda_handler(event, context):
     else:
         params = event['queryStringParameters']
         if 'province' not in params:
-            print('ayoo')
             response = table.query(
                 IndexName='city-patientID-index',
                 KeyConditionExpression='city = :city',
